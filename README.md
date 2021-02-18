@@ -1,2 +1,19 @@
-# theMachine
-a command line game that Inspired by Person of Interest (TV series)
+# the-machine
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
