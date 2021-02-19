@@ -2,24 +2,64 @@
   <div class="tm-terminal">
     <tm-terminal-header title="admin"/>
     <div class="tm-terminal-content">
-      <tm-line value="System Initializing" />
-      <tm-line label="connect established"/>
-      <tm-line value="username:" editable/>
+      <tm-shell
+          :banner="banner"
+          :commands="commands"
+      />
+      <!--      <tm-line value="System Initializing" />-->
+      <!--      <tm-line label="connect established"/>-->
+      <!--      <tm-line value="username:" editable/>-->
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent, ref } from 'vue'
 import TmTerminalHeader from "./TerminalHeader.vue";
-import TmLine from "../Line.vue";
+import TmLine from "./Line.vue";
+import TmShell from "./Shell.vue";
 
 export default defineComponent({
   name: "Terminal",
   components: {
     TmTerminalHeader,
-    TmLine
+    TmLine,
+    TmShell
+  },
+  setup() {
+    const banner = ref({
+          header: "Vue Shell",
+          subHeader: "Shell is power just enjoy 🔥",
+          helpHeader: 'Enter "help" for more information.',
+          emoji: {
+            // first: "🔅",
+            // second: "🔆",
+            // time: 750
+          },
+          sign: "VueShell$"
+        }
+    )
+    const commands = ref([
+      { name: "info",
+        desc: "Show information about this terminal",
+        get() {
+          return `<span>Made With ❤ ️By Old Flood</span>`;
+        }
+      },
+      {
+        name: "uname",
+        desc: "Show the current terminal name",
+        get() {
+          return navigator.appVersion;
+        }
+      }
+    ])
+    return {
+      banner,
+      commands
+    }
   }
+
 })
 </script>
 
@@ -38,7 +78,7 @@ export default defineComponent({
   .tm-terminal-content {
     width: 100%;
     height: calc(100% - 24px);
-    padding:2px $tm-basic-unit;
+    padding: 2px $tm-basic-unit;
     background: rgba(0, 0, 0, .9);
     backdrop-filter: blur(6px);
     overflow-y: scroll;
