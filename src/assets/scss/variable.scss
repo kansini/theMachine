@@ -6,3 +6,12 @@ $tm-color-info: #0000FF;
 $tm-color-warning: #E5E600;
 $tm-color-error: #E60000;
 $tm-basic-unit: 8px;
+$tm-traffic-light-red: #F96057;
+$tm-traffic-light-yellow: #F8CE52;
+$tm-traffic-light-green: #5FCF65;
+$tm-traffic-light-border: inset 0 0 0 1px rgba(0, 0, 0, .1);
+
+@mixin traffic-light($color) {
+  background: $tm-traffic-light-red;
+  box-shadow: $tm-traffic-light-border;
+}
