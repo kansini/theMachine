@@ -6,9 +6,6 @@
           :banner="banner"
           :commands="commands"
       />
-      <!--      <tm-line value="System Initializing" />-->
-      <!--      <tm-line label="connect established"/>-->
-      <!--      <tm-line value="username:" editable/>-->
     </div>
   </div>
 </template>

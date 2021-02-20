@@ -22,6 +22,8 @@ export default defineComponent({
   position: relative;
   width: 100%;
   height: 100vh;
+  background: url("../assets/img/main_bg1.jpg") no-repeat center;
+  background-size: cover;
   // padding: $tm-basic-unit;
   color: $tm-color-text;
   overflow: hidden;

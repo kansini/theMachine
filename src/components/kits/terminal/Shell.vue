@@ -225,7 +225,9 @@ export default {
   }
 
   .tm-shell-banner {
-    margin-bottom: 24px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px dashed $tm-color-success;
   }
 }
 
@@ -248,11 +250,6 @@ img {
   white-space: nowrap;
   color: #3a8b17;
   margin-right: 7px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  box-pack: center;
-  box-orient: vertical;
   user-select: none;
 }
 
@@ -267,7 +264,7 @@ img {
 }
 
 .ls-files {
-  line-height: 20px;
+  line-height: 24px;
 }
 
 [class^="tm-label-"] {

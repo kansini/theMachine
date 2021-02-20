@@ -32,6 +32,7 @@ export default defineComponent({
   padding: 0 16px;
   background: rgba(245, 245, 245, .8);
   box-shadow: inset 0 1px 3px 0 rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(8px);
 
   .btn-group {
     display: flex;
