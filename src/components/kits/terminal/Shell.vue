@@ -1,5 +1,5 @@
 <template>
-  <div @click="$refs.cmd.focus()">
+  <div @click="$refs.cmd.focus()" style="height: 100%">
     <div ref="terminal" class="tm-shell-container">
       <div v-if="banner" class="tm-shell-banner">
         <h2 v-if="banner.header" style="letter-spacing: 4px">{{ banner.header }}</h2>

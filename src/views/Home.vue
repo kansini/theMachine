@@ -7,13 +7,11 @@
 <script lang="ts">
 import {defineComponent, ref} from 'vue'
 import tmTerminal from '@/components/kits/terminal/Terminal.vue'
-import tmShell from '@/components/kits/terminal/Shell.vue'
 
 export default defineComponent({
   name: 'Home',
   components: {
-    tmTerminal,
-    tmShell
+    tmTerminal
   },
 })
 </script>
@@ -22,7 +20,7 @@ export default defineComponent({
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../assets/img/main_bg1.jpg") no-repeat center;
+  background: url("../assets/img/main_bg.jpg") no-repeat center;
   background-size: cover;
   // padding: $tm-basic-unit;
   color: $tm-color-text;
